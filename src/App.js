@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import NameForm from './Components/NameForm';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import Student from './Components/Student';
+import AddStudents from './Components/AddStudent';
 
 function App() {
+
+  let Name="Amit";
+  let LastName="Singh";
+  let Address="kharak"
+  let PhoneNumber=8053205361;
+  let Fee=1000;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      
+
+      <AddStudents
+                  name={Name} 
+                  lastname={LastName} 
+                  address={Address}
+                  phonenumber={PhoneNumber}
+                  fee={Fee}
+      ></AddStudents>
+      <Student></Student>
+    <Navbar></Navbar>
+    <NameForm></NameForm>
     </div>
   );
 }
